@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@theme {
+	--font-prosto: "Prosto One", sans-serif;
+	--color-primary-pink: #ffd4e1;
+	--color-pink-text: #ffadc7;
+	--color-dark-pink: #ff9aba;
+	--color-dark-grey: #333333;
+	--color-light-grey: #757575;
+}
+
+@layer utilities {
+	/* .text-outline {
+		-webkit-text-stroke: 2px black;
+	} */
+}
+
+/* @layer base {
+	html {
+		font-family: 'Prosto One"';
+	}
+} */
+
+@layer components {
+	.heading1 {
+		@apply text-4xl font-bold;
+	}
+
+	.heading2 {
+		@apply text-3xl font-bold;
+	}
+
+	.heading3 {
+		@apply text-2xl font-bold;
+	}
+
+	.section-base {
+		@apply flex flex-col p-2.5 w-full gap-2.5 items-center;
+	}
+
+	.para {
+		@apply text-dark-grey font-light;
+	}
+}
