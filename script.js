@@ -93,7 +93,7 @@
 		{
 			id: "hope",
 			name: "Hope",
-			image: "/assets/images/HEA_hope.avif",
+			image: "assets/images/HEA_hope.avif",
 			adoptedBy: "Dawn Nevitt",
 			year: "2021",
 			summary:
