@@ -1739,6 +1739,9 @@ h3 {
 	.nav-brand-text {
 		display: none;
 	}
+	.footer-grid {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 @media (max-width: 720px) {
 	.nav {
@@ -1779,5 +1782,19 @@ h3 {
 	}
 	.step {
 		padding-left: 18px;
+	}
+	.footer-grid {
+		grid-template-columns: 1fr;
+	}
+	.footer {
+		padding: 56px 6vw 28px;
+	}
+	.footer-text {
+		max-width: none;
+	}
+	.footer-bottom {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
 	}
 }
