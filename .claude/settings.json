@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(identify /Users/jamie/Documents/FEStudios/Websites/MM_Animal_Rescue/assets/files/logo.png)"
+    ]
+  }
+}

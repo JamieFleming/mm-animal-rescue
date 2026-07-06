@@ -3,215 +3,666 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<!-- Tailwind CSS -->
-		<link rel="stylesheet" href="./assets/css/output.css" />
-
-		<!-- Font -->
+		<title>MM Animal Rescue — We save lives, one paw at a time</title>
+		<meta
+			name="description"
+			content="MM Animal Rescue rescues and rehomes cats and dogs from Romania to loving homes across the UK." />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Mulish:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet" />
-
-		<title>MM Animal Rescue</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
-	<body class="bg-dark-pink">
-		<header class="fixed inset-x-0 top-0 z-50 h-20 bg-white shadow-xl">
-			<!-- Logo -->
-			<img
-				src="./assets/images/MMAR_Logo.avif"
-				alt="MM Animal Rescue Logo"
-				class="size-18.75 h-16 w-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
-			<!-- Hamburger for nav -->
-			<img
-				src="./assets/images/icons/hamburger.svg"
-				alt=""
-				class="size-12.5 absolute right-4 top-1/2 -translate-y-1/2" />
-		</header>
-
-		<main class="mt-20 flex flex-col gap-2.5">
-			<!-- Hero Section -->
-			<section
-				class="hero bg-[url('/assets/images/hero-img.avif')] bg-cover bg-center bg-no-repeat h-150 section-base justify-between">
-				<h1
-					class="heading1 inline-block rounded-2xl bg-white/20 px-6 py-4 text-white backdrop-blur-md text-center shadow-2xl">
-					MM Animal Rescue
-				</h1>
-				<h2
-					class="heading2 inline-block rounded-2xl bg-white/20 px-6 py-4 text-white backdrop-blur-md text-center shadow-xl">
-					Adopt Today
-				</h2>
-			</section>
-
-			<!-- Mission Section -->
-			<section class="mission section-base bg-primary-pink">
-				<h2
-					class="heading2 inline-block rounded-2xl bg-white/20 px-6 py-4 text-light-grey backdrop-blur-md text-center shadow-2xl">
-					OUR MISSION
-				</h2>
-
-				<img
-					src="./assets/images/dog_holding.avif"
-					alt="girl holding puppies"
-					class="border-8 border-white rounded-2xl shadow-xl" />
-
-				<div
-					class="rounded-2xl bg-white/20 px-6 py-4 text-light-grey backdrop-blur-md text-center para flex flex-col gap-2.5 shadow-xl">
-					<p class="">
-						At MM Animal Rescue, we are dedicated to rescuing and rehoming cats
-						and dogs from Romania to the UK. Our team of passionate animal
-						lovers works tirelessly to provide these animals with the love and
-						care they deserve. We believe that every animal deserves a second
-						chance at life, and we are committed to making that happen.
-					</p>
-					<p class="">
-						Join us in our mission to save lives and give these animals the
-						loving homes they deserve.
-					</p>
-				</div>
-				<button
-					class="heading3 rounded-2xl bg-dark-pink px-4 py-4 text-white text-center border-2 shadow-xl">
-					Learn More
-				</button>
-			</section>
-
-			<!-- Stats Section -->
-			<section class="stats section-base grid grid-cols-2 text-center bg-white">
-				<div class="">
-					<h2 class="heading3 text-pink-text">600k+</h2>
-					<p class="para">Strays on the streets</p>
-				</div>
-				<div>
-					<h2 class="heading3 text-pink-text">100's</h2>
-					<p class="para">Rescued & Rehomed</p>
-				</div>
-				<div class="col-span-2">
-					<h2 class="heading2 text-pink-text">1</h2>
-					<h3 class="heading3 text-dark-grey">Rescuer</h3>
-				</div>
-			</section>
-
-			<!-- Support Section -->
-			<section class="support section-base bg-light-grey">
-				<!-- Adopt -->
-				<div class="flex flex-col items-center text-center">
+	<body>
+		<!-- ===================== LIQUID-GLASS PILL NAV ===================== -->
+		<div class="nav-wrap">
+			<nav class="nav" id="nav">
+				<a href="#" class="nav-brand" data-page="home">
 					<img
-						src="./assets/images/icons/pink-paw.svg"
-						alt="pink paw icon"
-						class="size-25" />
-					<h2 class="heading2 text-white">Adopt A Pet</h2>
-					<p class="para text-white">
-						Our adoption process is simple, straightforward, and designed with
-						care. We're dedicated to matching each animal with the perfect
-						family.
-					</p>
+						src="/assets//images/logo-mark.png"
+						alt="MM Animal Rescue logo"
+						class="nav-logo" />
+					<span class="nav-brand-text">
+						<span class="nav-brand-name">MM Animal Rescue</span>
+						<span class="nav-brand-sub">ROMANIA &mdash; UK</span>
+					</span>
+				</a>
+				<div class="nav-links">
+					<a href="#" class="nav-link is-active" data-page="home">Home</a>
+					<a href="#" class="nav-link" data-page="adopt">Adopt</a>
+					<a href="#" class="nav-link" data-page="about">About</a>
 				</div>
-				<!-- Sponsor -->
-				<div class="flex flex-col items-center text-center">
+				<a href="#" class="btn btn-primary nav-donate" data-page="about"
+					>Donate</a
+				>
+			</nav>
+		</div>
+
+		<!-- ===================== HOME ===================== -->
+		<main class="page is-active" id="page-home">
+			<!-- HERO — cinematic full-bleed spotlight -->
+			<section class="hero-spotlight">
+				<div class="hero-spotlight-overlay">
 					<img
-						src="./assets/images/icons/pink-calendar.svg"
-						alt="pink paw icon"
-						class="size-25" />
-					<h2 class="heading2 text-white">Sponsor An Animal</h2>
-					<p class="para text-white">
-						Sponsoring an animal through our rescue is a wonderful way to
-						provide ongoing monthly support and make a real difference for
-						animals in need.
-					</p>
+						src="assets/images/hero-img.png"
+						alt="Girl playing with dogs in a yard"
+						class="photo hero-spotlight-photo" />
 				</div>
-				<!-- Donate -->
-				<div class="flex flex-col items-center text-center">
-					<img
-						src="./assets/images/icons/pink-donate.svg"
-						alt="pink paw icon"
-						class="size-25" />
-					<h2 class="heading2 text-white">Donate</h2>
-					<p class="para text-white">
-						At MM Animal Rescue, we rely on the generous donations of our
-						supporters to continue our vital work rescuing and rehoming animals
-						in need.
-					</p>
-				</div>
-				<!-- Socials -->
-				<div class="flex flex-col items-center text-center">
-					<img
-						src="./assets/images/icons/pink-thumbs-up.svg"
-						alt="pink paw icon"
-						class="size-25" />
-					<h2 class="heading2 text-white">Follow Our Socials</h2>
-					<p class="para text-white">
-						Follow us on Facebook, TikTok, or Instagram to stay updated with the
-						latest rescues and show your support.
-					</p>
-					<!-- Social links -->
-					<div class="flex gap-12 m-2.5">
-						<img
-							src="./assets/images/icons/facebook-icon.svg"
-							alt="facebook icon"
-							class="size-12.5" />
-						<img
-							src="./assets/images/icons/insagram-icon.svg"
-							alt="facebook icon"
-							class="size-12.5" />
-						<img
-							src="./assets/images/icons/tiktok-icon.svg"
-							alt="facebook icon"
-							class="size-12.5" />
+				<div class="hero-spotlight-inner">
+					<div class="hero-glass">
+						<span class="eyebrow eyebrow-light"
+							>Romania &mdash; United Kingdom</span
+						>
+						<h1 class="display-title display-title-light">
+							<span class="dt-line">We Save Lives</span>
+							<span class="dt-italic">one paw at a time</span>
+						</h1>
+						<p class="lead lead-light">
+							A volunteer-run sanctuary rescuing cats and dogs from Romania
+							&mdash; and finding them loving forever homes across the UK.
+						</p>
+						<div class="btn-row">
+							<a href="#" class="btn btn-primary" data-page="adopt"
+								>Meet our animals</a
+							>
+							<a href="#" class="btn btn-glass" data-page="about">Our story</a>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- View Pets Section -->
-			<section class="view-pets section-base bg-primary-pink">
-				<h2 class="heading2 text-dark-grey text-center">View Our Pets</h2>
-				<div class="flex flex-col gap-2.5">
-					<div class="cats relative pb-8">
-						<img
-							src="./assets/images/cat-img.avif"
-							alt="cat"
-							class="rounded-full size-74 mx-auto border-2 border-white shadow-xl" />
-						<h3
-							class="heading3 absolute left-1/2 bottom-0 -translate-x-1/2 text-white bg-light-grey py-2.5 px-5 rounded-2xl border-2 border-white shadow-xl">
-							Cats
-						</h3>
+			<!-- STATS BAND -->
+			<section class="stats-band">
+				<div class="stats-grid">
+					<div class="stat">
+						<div class="stat-num">600k<span>+</span></div>
+						<div class="stat-label">Strays on the street</div>
 					</div>
-					<div class="dogs relative pb-8">
+					<div class="stat stat-bordered">
+						<div class="stat-num">100<span>%</span></div>
+						<div class="stat-label">Volunteer-run</div>
+					</div>
+					<div class="stat stat-bordered">
+						<div class="stat-num">100s</div>
+						<div class="stat-label">Rescued & Rehomed</div>
+					</div>
+					<div class="stat stat-bordered">
+						<div class="stat-num">UK</div>
+						<div class="stat-label">Wide adoptions</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- MISSION -->
+			<section class="mission">
+				<div class="mission-grid">
+					<div class="mission-media">
 						<img
-							src="./assets/images/dog-img.avif"
-							alt="cat"
-							class="rounded-full size-74 mx-auto border-2 border-white shadow-xl" />
-						<h3
-							class="heading3 absolute left-1/2 bottom-0 -translate-x-1/2 text-white bg-light-grey py-2.5 px-5 rounded-2xl border-2 border-white shadow-xl">
-							Dogs
-						</h3>
+							src="assets/images/personImage.jpg"
+							alt="Girl holding puppies" />
+					</div>
+					<div>
+						<span class="eyebrow">Our mission</span>
+						<h2 class="italic-title">
+							Every animal deserves a second chance at life.
+						</h2>
+						<div class="rule"></div>
+						<p class="body">
+							At MM Animal Rescue, we are dedicated to rescuing and rehoming
+							cats and dogs from Romania to the UK. Our team of passionate
+							animal lovers works tirelessly to provide these animals with the
+							love and care they deserve.
+						</p>
+						<p class="body">
+							We believe that every animal deserves a second chance at life and
+							we are committed to making that happen.
+						</p>
+						<a href="#" class="link-underline" data-page="about"
+							>Read more about us &rarr;</a
+						>
+					</div>
+				</div>
+			</section>
+
+			<!-- FEATURED PETS -->
+			<section class="section">
+				<div class="container">
+					<div class="section-head">
+						<div>
+							<span class="eyebrow">Looking for a home</span>
+							<h2 class="italic-title">Meet a few of our friends</h2>
+						</div>
+						<a href="#" class="btn btn-ghost" data-page="adopt"
+							>See all animals</a
+						>
+					</div>
+					<div class="pet-grid" id="featured-grid"></div>
+				</div>
+			</section>
+
+			<!-- HOW IT WORKS -->
+			<section class="section how">
+				<div class="container">
+					<div class="center-head">
+						<span class="eyebrow">Simple &amp; supported</span>
+						<h2 class="italic-title">How adoption works</h2>
+					</div>
+					<div class="steps-grid">
+						<div class="step">
+							<div class="step-n">1</div>
+							<h3 class="step-title">Browse our animals</h3>
+							<p class="step-body">
+								Browse the cats and dogs in our care and find the friend who
+								feels right for you.
+							</p>
+						</div>
+						<div class="step">
+							<div class="step-n">2</div>
+							<h3 class="step-title">Apply online</h3>
+							<p class="step-body">
+								Fill in a short application telling us about you, your home and
+								your lifestyle.
+							</p>
+						</div>
+						<div class="step">
+							<div class="step-n">3</div>
+							<h3 class="step-title">Chat &amp; home check</h3>
+							<p class="step-body">
+								We&rsquo;ll arrange a friendly call and a home visit to make
+								sure it&rsquo;s a perfect match.
+							</p>
+						</div>
+						<div class="step">
+							<div class="step-n">4</div>
+							<h3 class="step-title">Welcome them home</h3>
+							<p class="step-body">
+								We handle the travel and paperwork &mdash; you get ready to
+								welcome your new family member.
+							</p>
+						</div>
+						<div class="step">
+							<div class="step-n">5</div>
+							<h3 class="step-title">Aftercare</h3>
+							<p class="step-body">
+								We will be on hand to answer any questions you may have and
+								provide support and aftercare to help your new adoption settle
+								into their new home.
+							</p>
+						</div>
+						<div class="step">
+							<div class="step-n">6</div>
+							<h3 class="step-title">Forever Home</h3>
+							<p class="step-body">
+								Once your furry friend is all settled in to their forever home,
+								love them and show them what its like to be loved!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- HAPPY EVER AFTERS -->
+			<section class="section">
+				<div class="container">
+					<div class="center-head">
+						<span class="eyebrow">Happy ever afters</span>
+						<h2 class="italic-title">Lives changed, one paw at a time</h2>
+					</div>
+					<div class="testi-grid" id="testi-grid"></div>
+				</div>
+			</section>
+
+			<!-- DONATE -->
+			<section class="section">
+				<div class="container">
+					<div class="donate">
+						<div class="donate-glow"></div>
+						<div class="donate-inner">
+							<div>
+								<span class="eyebrow">Help us help them</span>
+								<h2 class="italic-title donate-title">
+									Every donation feeds, treats and transports an animal to
+									safety.
+								</h2>
+								<p class="body">
+									We&rsquo;re 100% volunteer-run, so every penny goes directly
+									to the animals &mdash; vet care, food, and the journey to
+									their new UK homes.
+								</p>
+							</div>
+							<div class="donate-actions">
+								<div class="donate-amounts">
+									<span class="amt">&pound;10</span>
+									<span class="amt">&pound;25</span>
+									<span class="amt amt-on">&pound;50</span>
+								</div>
+								<a href="#" class="btn btn-primary btn-block" data-page="about"
+									>Donate now</a
+								>
+								<span class="donate-note"
+									>Secure &middot; one-off or monthly</span
+								>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<footer class="bg-white section-base gap-0">
-			<img
-				src="./assets/images/MMAR_Logo.avif"
-				alt="mm animal rescue logo"
-				class="size-12.5" />
-			<div class="socials">
-				<div class="flex gap-12 m-2.5">
-					<img
-						src="./assets/images/icons/facebook-icon.svg"
-						alt="facebook icon"
-						class="size-6.25" />
-					<img
-						src="./assets/images/icons/insagram-icon.svg"
-						alt="facebook icon"
-						class="size-6.25" />
-					<img
-						src="./assets/images/icons/tiktok-icon.svg"
-						alt="facebook icon"
-						class="size-6.25" />
+		<!-- ===================== ADOPT ===================== -->
+		<main class="page" id="page-adopt">
+			<section class="adopt-hero">
+				<span class="eyebrow">Adopt a friend</span>
+				<h1 class="display-title center">
+					<span class="dt-line">Find Your</span>
+					<span class="dt-italic">new best friend</span>
+				</h1>
+				<p class="lead lead-center">
+					Every one of our animals is vet-checked, vaccinated, neutered and
+					ready to travel to their forever home in the UK.
+				</p>
+				<div class="filters" id="filters">
+					<button class="filter is-active" data-filter="all">All</button>
+					<button class="filter" data-filter="Cat">Cats</button>
+					<button class="filter" data-filter="Dog">Dogs</button>
+				</div>
+			</section>
+
+			<section class="section section-tight">
+				<div class="container">
+					<div class="pet-grid" id="adopt-grid"></div>
+				</div>
+			</section>
+
+			<!-- APPLICATION FORM -->
+			<section class="section" id="apply">
+				<div class="container">
+					<div class="apply-card">
+						<div class="apply-side">
+							<span class="eyebrow eyebrow-light">Adoption application</span>
+							<h2 class="italic-title apply-title">Start the journey home</h2>
+							<p class="apply-text">
+								Tell us a little about yourself and who&rsquo;s caught your eye.
+								Our team will be in touch within 48 hours to arrange a friendly
+								chat and home check.
+							</p>
+							<div class="apply-steps">
+								<div class="apply-step">
+									<span class="apply-step-n">1</span>Apply online
+								</div>
+								<div class="apply-step">
+									<span class="apply-step-n">2</span>Chat &amp; home check
+								</div>
+								<div class="apply-step">
+									<span class="apply-step-n">3</span>Welcome them home
+								</div>
+							</div>
+						</div>
+						<div class="apply-form-wrap">
+							<form id="apply-form" class="form">
+								<div class="field-row">
+									<label class="field"
+										>Full name<input
+											type="text"
+											name="name"
+											required
+											placeholder="Your name"
+									/></label>
+									<label class="field"
+										>Phone<input
+											type="tel"
+											name="phone"
+											placeholder="Mobile number"
+									/></label>
+								</div>
+								<label class="field"
+									>Email<input
+										type="email"
+										name="email"
+										required
+										placeholder="you@email.com"
+								/></label>
+								<div class="field-row">
+									<label class="field"
+										>Interested in<select name="pet" id="apply-pet"></select
+									></label>
+									<label class="field"
+										>Home type
+										<select name="home">
+											<option>House with garden</option>
+											<option>House, no garden</option>
+											<option>Flat / apartment</option>
+											<option>Other</option>
+										</select>
+									</label>
+								</div>
+								<label class="field"
+									>Tell us about your home &amp; experience<textarea
+										name="message"
+										rows="3"
+										placeholder="Who lives with you, other pets, work patterns..."></textarea>
+								</label>
+								<button type="submit" class="btn btn-primary btn-block">
+									Submit application
+								</button>
+							</form>
+							<div class="form-success" id="apply-success" hidden>
+								<div class="success-icon">&#10003;</div>
+								<h3 class="success-title">Thank you!</h3>
+								<p class="success-text" id="apply-success-text">
+									Your application is in. We&rsquo;ll be in touch within 48
+									hours.
+								</p>
+								<button class="link-underline" id="apply-reset">
+									Submit another &rarr;
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ===================== ABOUT ===================== -->
+		<main class="page" id="page-about">
+			<section class="about-hero">
+				<div class="about-hero-grid">
+					<div>
+						<span class="eyebrow">Our story</span>
+						<h1 class="display-title">
+							<span class="dt-line">A second chance</span>
+							<span class="dt-italic">1,400 miles from home</span>
+						</h1>
+						<p class="lead">
+							MM Animal Rescue began with one simple belief &mdash; that every
+							animal, no matter where they&rsquo;re born, deserves love, safety
+							and a family. What started as a few volunteers feeding strays in
+							Romania is now a lifeline carrying cats and dogs to forever homes
+							across the UK.
+						</p>
+					</div>
+					<div class="about-media">
+						<div
+							class="photo about-photo"
+							data-label="A founder or volunteer with the animals"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- VALUES -->
+			<section class="section section-tight">
+				<div class="container values-grid">
+					<div class="value">
+						<div class="value-icon">&#10084;</div>
+						<h3 class="value-title">Compassion first</h3>
+						<p class="body">
+							Every decision we make puts the wellbeing of the animal at its
+							heart, always.
+						</p>
+					</div>
+					<div class="value">
+						<div class="value-icon">&#9873;</div>
+						<h3 class="value-title">Total transparency</h3>
+						<p class="body">
+							We&rsquo;re 100% volunteer-run, so every donation goes straight to
+							vet care, food and travel.
+						</p>
+					</div>
+					<div class="value">
+						<div class="value-icon">&#8962;</div>
+						<h3 class="value-title">Lifelong support</h3>
+						<p class="body">
+							Adoption isn&rsquo;t the end of the journey. We&rsquo;re here for
+							you and your pet, for life.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- MISSION BAND -->
+			<section class="section section-tight">
+				<div class="container">
+					<div class="mission-band">
+						<div>
+							<span class="eyebrow">Our mission</span>
+							<h2 class="italic-title">Saving lives, one paw at a time.</h2>
+							<div class="rule"></div>
+							<p class="body">
+								We are dedicated to rescuing and rehoming cats and dogs from
+								Romania to the UK. Our team of passionate animal lovers works
+								tirelessly to provide these animals with the love and care they
+								deserve.
+							</p>
+							<p class="body">
+								Join us in our mission to save lives and give these animals the
+								loving homes they deserve.
+							</p>
+						</div>
+						<div class="mini-stats">
+							<div class="mini-stat">
+								<div class="mini-num">1,200+</div>
+								<div class="mini-label">Animals rehomed</div>
+							</div>
+							<div class="mini-stat">
+								<div class="mini-num">9</div>
+								<div class="mini-label">Years rescuing</div>
+							</div>
+							<div class="mini-stat">
+								<div class="mini-num">100%</div>
+								<div class="mini-label">Volunteer-run</div>
+							</div>
+							<div class="mini-stat">
+								<div class="mini-num">UK</div>
+								<div class="mini-label">Wide adoptions</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- TEAM -->
+			<section class="section section-tight">
+				<div class="container">
+					<div class="center-head">
+						<span class="eyebrow">The people behind the paws</span>
+						<h2 class="italic-title">Our volunteers</h2>
+					</div>
+					<div class="team-wrap" id="team-grid"></div>
+				</div>
+			</section>
+
+			<!-- HAPPY EVER AFTERS -->
+			<section class="section section-tight">
+				<div class="container">
+					<div class="center-head">
+						<span class="eyebrow">Happy ever afters</span>
+						<h2 class="italic-title">Stories from our families</h2>
+					</div>
+					<div class="testi-grid" id="testi-grid-about"></div>
+				</div>
+			</section>
+
+			<!-- CONTACT -->
+			<section class="section" id="contact">
+				<div class="container contact-grid">
+					<div>
+						<span class="eyebrow">Get in touch</span>
+						<h2 class="italic-title">We&rsquo;d love to hear from you</h2>
+						<p class="body">
+							Questions about adopting, fostering or volunteering? Send us a
+							message and a member of our team will get back to you.
+						</p>
+						<div class="contact-rows">
+							<div class="contact-row">
+								<span class="contact-ico">&#9993;</span>
+								<div>
+									<div class="contact-k">Email</div>
+									<div class="contact-v">info@mmanimalrescue.com</div>
+								</div>
+							</div>
+							<div class="contact-row">
+								<span class="contact-ico">&#9742;</span>
+								<div>
+									<div class="contact-k">Phone</div>
+									<div class="contact-v">+44 (0)20 0000 0000</div>
+								</div>
+							</div>
+							<div class="contact-row">
+								<span class="contact-ico">&#9873;</span>
+								<div>
+									<div class="contact-k">Based in</div>
+									<div class="contact-v">
+										United Kingdom &middot; Adoptions nationwide
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contact-form-wrap">
+						<form id="contact-form" class="form">
+							<label class="field"
+								>Name<input
+									type="text"
+									name="name"
+									required
+									placeholder="Your name"
+							/></label>
+							<label class="field"
+								>Email<input
+									type="email"
+									name="email"
+									required
+									placeholder="you@email.com"
+							/></label>
+							<label class="field"
+								>Message<textarea
+									name="message"
+									rows="4"
+									required
+									placeholder="How can we help?"></textarea>
+							</label>
+							<button type="submit" class="btn btn-primary btn-block">
+								Send message
+							</button>
+						</form>
+						<div class="form-success" id="contact-success" hidden>
+							<div class="success-icon">&#10003;</div>
+							<h3 class="success-title">Message sent!</h3>
+							<p class="success-text">
+								Thank you for reaching out &mdash; we&rsquo;ll reply as soon as
+								we can.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ===================== PET MODAL ===================== -->
+		<div class="modal" id="modal" hidden>
+			<div class="modal-card">
+				<div
+					class="photo modal-photo"
+					id="modal-photo"
+					data-label="Photo"></div>
+				<div class="modal-body">
+					<div class="modal-top">
+						<span class="badge" id="modal-species">Cat</span>
+						<span class="status" id="modal-status">Available</span>
+						<button class="modal-close" id="modal-close" aria-label="Close">
+							&times;
+						</button>
+					</div>
+					<h2 class="modal-name" id="modal-name">Luna</h2>
+					<div class="modal-meta" id="modal-meta">
+						Domestic Shorthair &middot; 2 years
+					</div>
+					<div class="modal-details" id="modal-details"></div>
+					<div class="modal-compat" id="modal-compat"></div>
+					<p class="modal-bio" id="modal-bio"></p>
+					<p class="modal-story" id="modal-story"></p>
+					<div class="chip-row" id="modal-traits"></div>
+					<button class="btn btn-primary btn-block" id="modal-apply">
+						Apply to adopt &rarr;
+					</button>
 				</div>
 			</div>
-			<p class="para text-pink-text">&copy Mihaela Maria Animal Rescue</p>
+		</div>
+
+		<!-- ===================== STORY MODAL ===================== -->
+		<div class="modal" id="story-modal" hidden>
+			<div class="story-card">
+				<button class="modal-close" id="story-close" aria-label="Close">
+					&times;
+				</button>
+				<div class="story-photo" id="story-photo"></div>
+				<div class="story-body">
+					<h2 class="story-name" id="story-name"></h2>
+					<div class="story-meta" id="story-meta"></div>
+					<p class="story-text" id="story-text"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- ===================== FOOTER ===================== -->
+		<footer class="footer">
+			<div class="footer-grid">
+				<div>
+					<div class="footer-brand">
+						<img
+							src="assets/images/logo-mark.png"
+							alt="MM Animal Rescue"
+							class="footer-logo" />
+						<span class="footer-name">MM Animal Rescue</span>
+					</div>
+					<p class="footer-text">
+						Rescuing and rehoming cats and dogs from Romania to loving homes
+						across the UK. We save lives, one paw at a time.
+					</p>
+					<div class="footer-social">
+						<a href="#">Instagram</a>
+						<a href="#">Facebook</a>
+					</div>
+				</div>
+				<div>
+					<div class="footer-h">Explore</div>
+					<a href="#" class="footer-link" data-page="home">Home</a>
+					<a href="#" class="footer-link" data-page="adopt">Adopt</a>
+					<a href="#" class="footer-link" data-page="about"
+						>About &amp; Contact</a
+					>
+				</div>
+				<div>
+					<div class="footer-h">Support</div>
+					<a href="#" class="footer-link" data-page="about">Donate</a>
+					<a href="#" class="footer-link" data-page="adopt">Foster</a>
+					<a href="#" class="footer-link" data-page="about">Volunteer</a>
+				</div>
+				<div>
+					<div class="footer-h">Contact</div>
+					<span class="footer-contact">hello@mmanimalrescue.com</span>
+					<span class="footer-contact">United Kingdom</span>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span
+					>&copy; 2026 MM Animal Rescue. A volunteer-run animal rescue.</span
+				>
+				<a
+					href="https://festudios.co.uk"
+					class="footer-made-by"
+					target="_blank"
+					rel="noopener">
+					Made by
+					<img
+						src="assets/files/lg_logo.png"
+						alt="FE Studios"
+						class="footer-fe-logo" />
+				</a>
+			</div>
 		</footer>
+
+		<script src="script.js"></script>
 	</body>
 </html>
