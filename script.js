@@ -129,22 +129,22 @@
 		{
 			name: "Mihaela Maria",
 			role: "Founder & Rescuer",
-			image: "/assets/images/mihaela_profile.png",
+			image: "assets/images/mihaela_profile.png",
 		},
 		{
 			name: "Nicola Bouzid",
 			role: "Adoption Manager",
-			image: "/assets/images/nicola_profile.png",
+			image: "assets/images/nicola_profile.png",
 		},
 		{
 			name: "Francesca Wallace",
 			role: "Admin/Support",
-			image: "/assets/images/frankie_profile.png",
+			image: "assets/images/frankie_profile.png",
 		},
 		{
 			name: "Jacqueline Wallace",
 			role: "Fundraising Manager",
-			image: "/assets/images/jakki_profile.png",
+			image: "assets/images/jakki_profile.png",
 		},
 		{ name: "Monique Rainey", role: "Adoption & Fundraising" },
 		{ name: "Pam Robinson", role: "Fundraising North" },
